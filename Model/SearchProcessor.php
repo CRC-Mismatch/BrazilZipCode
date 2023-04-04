@@ -98,7 +98,7 @@ class SearchProcessor
      */
     public function searchFromDatabase(ZipCodeInterface $zipObject)
     {
-        if (!$this->configHelper->isCacheEnabled()) {
+        if (!$this->configHelper->isDbPersistenceEnabled()) {
             return $zipObject;
         }
 
